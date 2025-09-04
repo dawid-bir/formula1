@@ -4,8 +4,6 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Rennleitung {
-    //private static final double S_LAENGE= 260.286;
-    //private static final double R_LAENGE= 3.337;
     public static double km= 0;
     public static int runde= 0;
     public boolean sc= false;
