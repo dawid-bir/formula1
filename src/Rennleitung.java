@@ -62,6 +62,9 @@ public class Rennleitung {
                         break;
                     case "Bg":
                         System.out.println("[Runde "+r+"] "+name+" ist an die Box gefahren!");
+                        break;
+                    case default:
+                        return;
                 }
                 if(r==24) {
                     if(!scstart) {
