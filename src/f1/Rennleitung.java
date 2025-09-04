@@ -4,9 +4,6 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Rennleitung {
-    private static double km= 0;
-    private static int runde= 0;
-    private boolean sc= false;
     private static final String RUNDETXT= "[Runde ";
     private static boolean running= true;
     private static int fertig=0;
