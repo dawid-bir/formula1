@@ -7,6 +7,7 @@ public class Rennleitung {
     public static double km= 0;
     public static int runde= 0;
     public boolean sc= false;
+    private static final String RUNDETXT= "[Runde ";
     public static boolean running= true;
     public static int fertig=0;
     private static BlockingQueue<String> bq= new LinkedBlockingQueue<>();
@@ -55,20 +56,20 @@ public class Rennleitung {
                 String bedingung= zeile[2];
                 switch (bedingung) {
                     case "gB":
-                        System.out.println("[Runde "+r+"] "+name+" geht gleich an die Box!");
+                        System.out.println(RUNDETXT+r+"] "+name+" geht gleich an die Box!");
                         break;
                     case "Br":
-                        System.out.println("[Runde "+r+"] "+name+" ist nach 25ms aus der Box gefahren!");
+                        System.out.println(RUNDETXT+r+"] "+name+" ist nach 25ms aus der Box gefahren!");
                         break;
                     case "Bg":
-                        System.out.println("[Runde "+r+"] "+name+" ist an die Box gefahren!");
+                        System.out.println(RUNDETXT+r+"] "+name+" ist an die Box gefahren!");
                         break;
                     case default:
                         return;
                 }
                 if(r==24) {
                     if(!scstart) {
-                        System.out.println("[Runde " + r + "] Virtual Safety Car ist aktiv!");
+                        System.out.println(RUNDETXT + r + "] Virtual Safety Car ist aktiv!");
                         scstart= true;
                     }
                     for(int i=0; i< fahrers.length;i++) {
@@ -77,7 +78,7 @@ public class Rennleitung {
                 }
                 if(r==34) {
                     if(!scend) {
-                        System.out.println("[Runde " + r + "] Virtual Safety Car ist vorbei!");
+                        System.out.println(RUNDETXT + r + "] Virtual Safety Car ist vorbei!");
                         scend= true;
                     }
                     for(int i=0; i< fahrers.length;i++) {
@@ -86,7 +87,7 @@ public class Rennleitung {
                 }
                 if(bedingung.equals("fertig")) {
                     fertig++;
-                    System.out.println("[Runde "+r+"] "+name+" ist im Ziel!");
+                    System.out.println(RUNDETXT+r+"] "+name+" ist im Ziel!");
                 }
                 if(fertig==6)running=false;
             } catch (InterruptedException ie) {
