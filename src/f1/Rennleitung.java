@@ -25,23 +25,6 @@ public class Rennleitung {
         for(int j=0; j< fahrers.length; j++) {
             fahrers[j].start();
         }
-        /**
-        for(double i=0; i<S_LAENGE; i++) {
-            runde= (int) (km/R_LAENGE);
-            if(runde== 24) {
-                System.out.println("[Runde "+runde+"] Virtual Safety Car ist aktiv!");
-                for(int j=0; j<6; j++) {
-                    fahrers[j].setExtra(1.4000);
-                }
-            }
-            if(runde== 34) {
-                System.out.println("[Runde "+runde+"] Virtual Safety Car ist beendet!");
-                for(int j=0; j<6; j++) {
-                    fahrers[j].setExtra(0);
-                }
-            }
-        }
-         */
         boolean scstart= false;
         boolean scend= false;
         while(running) {
