@@ -1,3 +1,5 @@
+package f1;
+
 public enum Reifen {
     SOFT (1,20),
     MEDIUM (1.0006, 40),

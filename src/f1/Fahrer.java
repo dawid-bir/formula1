@@ -1,3 +1,5 @@
+package f1;
+
 import java.util.concurrent.BlockingQueue;
 
 public class Fahrer extends Thread {
