@@ -57,6 +57,7 @@ public class Fahrer extends Thread {
                         Thread.sleep(25);
                         bq.add(runde+" "+name+ " Br");
                     } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
                         throw new RuntimeException(e);
                     }
                     System.out.println();
@@ -64,6 +65,8 @@ public class Fahrer extends Thread {
                 try {
                     Thread.sleep((long) (100*(fgeschwindigkeit+reifen.getGeschwindigkeit()+extra)));
                 } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    System.out.println(e.getMessage());
                     throw new RuntimeException(e);
                 }
                 bq.add(runde+" "+name+ " RundeFertig");

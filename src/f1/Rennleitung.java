@@ -88,7 +88,8 @@ public class Rennleitung {
                 }
                 if(fertig==6)running=false;
             } catch (InterruptedException ie) {
-                System.out.println("extecption");
+                Thread.currentThread().interrupt();
+                System.out.println("extecption" + ie.getMessage());
             }
         }
     }
