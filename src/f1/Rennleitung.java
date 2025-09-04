@@ -4,12 +4,12 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Rennleitung {
-    public static double km= 0;
-    public static int runde= 0;
-    public boolean sc= false;
+    private static double km= 0;
+    private static int runde= 0;
+    private boolean sc= false;
     private static final String RUNDETXT= "[Runde ";
-    public static boolean running= true;
-    public static int fertig=0;
+    private static boolean running= true;
+    private static int fertig=0;
     private static BlockingQueue<String> bq= new LinkedBlockingQueue<>();
 
     public static void main(String[] args) {
