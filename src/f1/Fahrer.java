@@ -6,8 +6,6 @@ public class Fahrer extends Thread {
 
     private String name;
     private double fgeschwindigkeit;
-    private double rgeschwindigkeit;
-    private int reifenrunden;
     private double km= 0;
     private int runde= 0;
     private double extra= 0;
@@ -21,22 +19,6 @@ public class Fahrer extends Thread {
         this.reifen=r;
         this.team= t;
         this.bq=bq;
-    }
-
-    public void setReifenrunden(int reifenrunden) {
-        this.reifenrunden = reifenrunden;
-    }
-
-    public int getReifenrunden() {
-        return this.reifenrunden;
-    }
-
-    public void setRgeschwindigkeit(double rgeschwindigkeit) {
-        this.rgeschwindigkeit = rgeschwindigkeit;
-    }
-
-    public String getFName() {
-        return name;
     }
 
     public void setExtra(double zahl) {
